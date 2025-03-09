@@ -1,0 +1,16 @@
+[ {
+  "name" : "duckduckgo-search",
+  "description" : "Search on the Internet using using DuckDuckGo",
+  "uri" : "https://api.duckduckgo.com/?q={searchTerm}&format=json&pretty=1",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : {
+      "searchTerm" : {
+        "type" : "string",
+        "description" : "The term or subject to search on the web"
+      }
+    },
+    "required" : [ "searchTerm" ]
+  }
+} ]
