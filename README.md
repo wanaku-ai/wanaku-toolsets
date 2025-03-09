@@ -12,4 +12,5 @@ can be easily imported into the router.
 | `fun`         | Funny stuff, such as memes and jokes                                |
 | `mexico`      | E-gov services and other useful utilities for Mexican users         |
 | `util`        | Other utilities of general interest                                 |
+| `search`      | Web search APIs                                                     |
 | `web`         | Useful APIs and utilities for the web, such as services status APIs |
