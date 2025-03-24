@@ -1,7 +1,7 @@
 [ {
   "name" : "geodetic-station",
   "description" : "Get geodetic stations located in an specific state in Brazil",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/bdg/estado/{stateCode}/estacoes",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/bdg/estado/{parameter.value('stateCode')}/estacoes",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -16,7 +16,7 @@
 }, {
   "name" : "state-districts",
   "description" : "Get a list of all districts, their IDs and details from an specific state in Brazil",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{stateCode}/distritos",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{parameter.value('stateCode')}/distritos",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -31,7 +31,7 @@
 }, {
   "name" : "state-cities",
   "description" : "Get a list of all cities, their IDs and details from an specific state in Brazil",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{stateCode}/municipios",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{parameter.value('stateCode')}/municipios",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -46,7 +46,7 @@
 }, {
   "name" : "state-microregions",
   "description" : "Get a list of all micro-regions, their IDs and details from an specific state in Brazil",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{stateCode}/microrregioes",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{parameter.value('stateCode')}/microrregioes",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -61,7 +61,7 @@
 }, {
   "name" : "state-metropolitan-regions",
   "description" : "Get a list of all metropolitan regions, their IDs and details from an specific state in Brazil",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{stateCode}/regioes-metropolitanas",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/localidades/estados/{parameter.value('stateCode')}/regioes-metropolitanas",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -96,7 +96,7 @@
 }, {
   "name" : "countries-socio",
   "description" : "Get socio-economical details for a country",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/paises/{country}",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/paises/{parameter.value('country')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -131,7 +131,7 @@
 }, {
   "name" : "ibge-pesquisas-specific",
   "description" : "Get details from an specific research published by the Brazilian Institute of Geography (IBGE)",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/pesquisas/{researchId}",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/pesquisas/{parameter.value('researchId')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -146,7 +146,7 @@
 }, {
   "name" : "ibge-pesquisas-results",
   "description" : "Get results from an specific research published by the Brazilian Institute of Geography (IBGE)",
-  "uri" : "https://servicodados.ibge.gov.br/api/v1/pesquisas/{researchId}/resultados/{locationId}",
+  "uri" : "https://servicodados.ibge.gov.br/api/v1/pesquisas/{parameter.value('researchId')}/resultados/{parameter.value('locationId')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -165,7 +165,7 @@
 }, {
   "name" : "ibge-grid-state",
   "description" : "Get the geographical grid published by the Brazilian Institute of Geography (IBGE) for an specific state",
-  "uri" : "https://servicodados.ibge.gov.br/api/v4/malhas/estados/{stateCode}",
+  "uri" : "https://servicodados.ibge.gov.br/api/v4/malhas/estados/{parameter.value('stateCode')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -180,7 +180,7 @@
 }, {
   "name" : "ibge-grid-city",
   "description" : "Get the geographical grid published by the Brazilian Institute of Geography (IBGE) for an specific state",
-  "uri" : "https://servicodados.ibge.gov.br/api/v4/malhas/municipios/{locationId}",
+  "uri" : "https://servicodados.ibge.gov.br/api/v4/malhas/municipios/{parameter.value('locationId')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -195,7 +195,7 @@
 }, {
   "name" : "zip-code-cep",
   "description" : "Zipcode (CEP) to city lookup",
-  "uri" : "https://brasilapi.com.br/api/cep/v2/{zipCode}",
+  "uri" : "https://brasilapi.com.br/api/cep/v2/{parameter.value('zipCode')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -210,7 +210,7 @@
 }, {
   "name" : "cnpj-lookup",
   "description" : "Lookup company details from its fiscal identification (CNPJ)",
-  "uri" : "https://brasilapi.com.br/api/cnpj/v1/{cnpj}",
+  "uri" : "https://brasilapi.com.br/api/cnpj/v1/{parameter.value('cnpj')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -235,7 +235,7 @@
 }, {
   "name" : "brazilian-bank-info",
   "description" : "Get bank information, such as IDs, codes and full name from its code",
-  "uri" : "https://brasilapi.com.br/api/banks/v1/{code}",
+  "uri" : "https://brasilapi.com.br/api/banks/v1/{parameter.value('code')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -250,7 +250,7 @@
 }, {
   "name" : "brazilian-holidays",
   "description" : "Get Brazilian national holidays",
-  "uri" : "https://brasilapi.com.br/api/feriados/v1/{year}",
+  "uri" : "https://brasilapi.com.br/api/feriados/v1/{parameter.value('year')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
