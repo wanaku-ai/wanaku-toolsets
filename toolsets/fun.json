@@ -29,24 +29,24 @@
     "required" : null
   }
 }, {
-  "name" : "meow-facts",
-  "description" : "Retrieve random facts about cats",
-  "uri" : "https://meowfacts.herokuapp.com?count={count}",
+  "name" : "dog-facts",
+  "description" : "Retrieve random facts about dogs",
+  "uri" : "https://dogapi.dog/api/v2/facts?limit={parameter.value('limit')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
     "properties" : {
-      "count" : {
+      "limit" : {
         "type" : "int",
         "description" : "The count of facts to retrieve"
       }
     },
-    "required" : [ "count" ]
+    "required" : [ "limit" ]
   }
 }, {
-  "name" : "dog-facts",
-  "description" : "Retrieve random facts about dogs",
-  "uri" : "https://dogapi.dog/api/v2/facts?limit={count}",
+  "name" : "meow-facts",
+  "description" : "Retrieve random facts about cats",
+  "uri" : "https://meowfacts.herokuapp.com?count={parameter.value('count')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",

@@ -11,7 +11,7 @@
 }, {
   "name" : "list-provider-apis",
   "description" : "Get a list of APIs from an specific provider",
-  "uri" : "https://api.apis.guru/v2/.json",
+  "uri" : "https://api.apis.guru/v2/{parameter.value('serviceProvider')}.json",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -36,7 +36,7 @@
 }, {
   "name" : "dns-lookup-tool",
   "description" : "Look up DNS records for a hostname, domain name, or IP address on the public Internet",
-  "uri" : "https://networkcalc.com/api/dns/lookup/{hostname}",
+  "uri" : "https://networkcalc.com/api/dns/lookup/{parameter.value('hostname')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -51,7 +51,7 @@
 }, {
   "name" : "whois-lookup-tool",
   "description" : "Get the WHOIS registration information for a website's hostname, domain, or IP address",
-  "uri" : "https://networkcalc.com/api/dns/whois/{hostname}",
+  "uri" : "https://networkcalc.com/api/dns/whois/{parameter.value('hostname')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -66,7 +66,7 @@
 }, {
   "name" : "qr-code-generator",
   "description" : "Generate a QR code for URL of a website or address",
-  "uri" : "https://www.qrtag.net/api/qr_64.png?url={url}",
+  "uri" : "https://www.qrtag.net/api/qr_64.png?url={parameter.value('url')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -81,7 +81,7 @@
 }, {
   "name" : "email-verification",
   "description" : "Verify if an email address is legit",
-  "uri" : "https://api.eva.pingutil.com/email?email={email}",
+  "uri" : "https://api.eva.pingutil.com/email?email={parameter.value('email')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -96,7 +96,7 @@
 }, {
   "name" : "estimate-site-carbon-footprint",
   "description" : "Estimate the carbon footprint for a website",
-  "uri" : " https://api.websitecarbon.com/site?url={website}",
+  "uri" : " https://api.websitecarbon.com/site?url={parameter.value('website')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",

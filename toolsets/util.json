@@ -1,7 +1,7 @@
 [ {
   "name" : "predict-age-tool",
   "description" : "Predict a person age by his or her name",
-  "uri" : "https://api.agify.io?name={name}",
+  "uri" : "https://api.agify.io?name={parameter.value('name')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -16,7 +16,7 @@
 }, {
   "name" : "predict-gender-tool",
   "description" : "Predict a person gender by his or her name",
-  "uri" : " https://api.genderize.io?name\\={name}",
+  "uri" : " https://api.genderize.io?name\\={parameter.value('name')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -31,7 +31,7 @@
 }, {
   "name" : "predict-nationality-tool",
   "description" : "Predict a person nationality by his or her name",
-  "uri" : " https://api.nationalize.io?name\\={name}",
+  "uri" : " https://api.nationalize.io?name\\={parameter.value('name')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -66,7 +66,7 @@
 }, {
   "name" : "get-information-about-specific-fruit",
   "description" : "Get information about a specific fruit",
-  "uri" : "https://www.fruityvice.com/api/fruit/{fruit}",
+  "uri" : "https://www.fruityvice.com/api/fruit/{parameter.value('fruit')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -81,7 +81,7 @@
 }, {
   "name" : "breweries-in-city",
   "description" : "Get a list of breweries from a given city",
-  "uri" : "https://api.openbrewerydb.org/v1/breweries?by_city={city}",
+  "uri" : "https://api.openbrewerydb.org/v1/breweries?by_city={parameter.value('city')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -96,7 +96,7 @@
 }, {
   "name" : "product-information-by-barcode",
   "description" : "Get product information by barcode",
-  "uri" : "https://world.openfoodfacts.org/api/v3/product/{barcode}.json",
+  "uri" : "https://world.openfoodfacts.org/api/v3/product/{parameter.value('barcode')}.json",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
@@ -111,7 +111,7 @@
 }, {
   "name" : "get-administrative-divisions-of-a-country",
   "description" : "Get the administrative divisions of a country",
-  "uri" : "https://rawcdn.githack.com/kamikazechaser/administrative-divisions-db/master/api/{countryCode}.json",
+  "uri" : "https://rawcdn.githack.com/kamikazechaser/administrative-divisions-db/master/api/{parameter.value('countryCode')}.json",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",

@@ -1,7 +1,7 @@
 [ {
   "name" : "mexico-zip-codes",
   "description" : "Get the zip code for a city from Mexico",
-  "uri" : "https://sepomex.icalialabs.com/api/v1/zip_codes?city={city}",
+  "uri" : "https://sepomex.icalialabs.com/api/v1/zip_codes?city={parameter.value('city')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",

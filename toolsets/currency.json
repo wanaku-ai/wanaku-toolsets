@@ -1,7 +1,7 @@
 [ {
   "name" : "free-currency-conversion-tool",
   "description" : "Currency conversion tool",
-  "uri" : "https://economia.awesomeapi.com.br/last/{fromCurrency}-{toCurrency}",
+  "uri" : "https://economia.awesomeapi.com.br/last/{parameter.value('fromCurrency')}-{parameter.value('toCurrency')}",
   "type" : "http",
   "inputSchema" : {
     "type" : "object",
