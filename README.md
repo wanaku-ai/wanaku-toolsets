@@ -1,10 +1,11 @@
 # Wanaku Tool Sets
 
 
-## Older Versions
+## Released Versions
 
 | Version                                                                 |
 |-------------------------------------------------------------------------|
+| [0.0.4](https://github.com/wanaku-ai/wanaku-toolsets/tree/wanaku-0.0.4) |
 | [0.0.3](https://github.com/wanaku-ai/wanaku-toolsets/tree/wanaku-0.0.3) |
 
 ## Toolsets
