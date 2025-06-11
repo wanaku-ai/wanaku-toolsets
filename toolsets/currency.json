@@ -6,6 +6,13 @@
   "inputSchema" : {
     "type" : "object",
     "properties" : {
+      "CamelHttpMethod" : {
+        "type" : "string",
+        "description" : "HTTP method to use when call the service.",
+        "target" : "header",
+        "scope" : "service",
+        "value" : "GET"
+      },
       "toCurrency" : {
         "type" : "string",
         "description" : "The currency to convert to using the 3 letter currency code"
