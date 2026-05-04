@@ -5,6 +5,7 @@
 
 | Version                                                                 |
 |-------------------------------------------------------------------------|
+| [0.1.0](https://github.com/wanaku-ai/wanaku-toolsets/tree/wanaku-0.1.0) |
 | [0.0.7](https://github.com/wanaku-ai/wanaku-toolsets/tree/wanaku-0.0.7) |
 | [0.0.6](https://github.com/wanaku-ai/wanaku-toolsets/tree/wanaku-0.0.6) |
 | [0.0.5](https://github.com/wanaku-ai/wanaku-toolsets/tree/wanaku-0.0.5) |
