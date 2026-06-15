@@ -123,4 +123,107 @@
     },
     "required" : [ "countryCode" ]
   }
+}, {
+  "name" : "get-public-holidays",
+  "description" : "Get all public holidays for a given country and year",
+  "uri" : "https://date.nager.at/api/v3/PublicHolidays/{parameter.value('year')}/{parameter.value('countryCode')}",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : {
+      "year" : {
+        "type" : "string",
+        "description" : "The calendar year (e.g., 2026)"
+      },
+      "countryCode" : {
+        "type" : "string",
+        "description" : "The ISO 3166-1 alpha-2 country code (e.g., US, BR, DE, AT)"
+      }
+    },
+    "required" : [ "year", "countryCode" ]
+  }
+}, {
+  "name" : "get-next-public-holidays",
+  "description" : "Get upcoming public holidays for the next 365 days for a given country",
+  "uri" : "https://date.nager.at/api/v3/NextPublicHolidays/{parameter.value('countryCode')}",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : {
+      "countryCode" : {
+        "type" : "string",
+        "description" : "The ISO 3166-1 alpha-2 country code (e.g., US, BR, DE, AT)"
+      }
+    },
+    "required" : [ "countryCode" ]
+  }
+}, {
+  "name" : "get-next-public-holidays-worldwide",
+  "description" : "Get upcoming public holidays worldwide for the next 7 days",
+  "uri" : "https://date.nager.at/api/v3/NextPublicHolidaysWorldwide",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : { },
+    "required" : null
+  }
+}, {
+  "name" : "is-today-public-holiday",
+  "description" : "Check if today is a public holiday in a given country",
+  "uri" : "https://date.nager.at/api/v3/IsTodayPublicHoliday/{parameter.value('countryCode')}",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : {
+      "countryCode" : {
+        "type" : "string",
+        "description" : "The ISO 3166-1 alpha-2 country code (e.g., US, BR, DE, AT)"
+      }
+    },
+    "required" : [ "countryCode" ]
+  }
+}, {
+  "name" : "get-long-weekends",
+  "description" : "Get all long weekends for a given country and year",
+  "uri" : "https://date.nager.at/api/v3/LongWeekend/{parameter.value('year')}/{parameter.value('countryCode')}",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : {
+      "year" : {
+        "type" : "string",
+        "description" : "The calendar year (e.g., 2026)"
+      },
+      "countryCode" : {
+        "type" : "string",
+        "description" : "The ISO 3166-1 alpha-2 country code (e.g., US, BR, DE, AT)"
+      }
+    },
+    "required" : [ "year", "countryCode" ]
+  }
+}, {
+  "name" : "get-country-info",
+  "description" : "Get country info including common name, official name, region and borders",
+  "uri" : "https://date.nager.at/api/v3/CountryInfo/{parameter.value('countryCode')}",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : {
+      "countryCode" : {
+        "type" : "string",
+        "description" : "The ISO 3166-1 alpha-2 country code (e.g., US, BR, DE, AT)"
+      }
+    },
+    "required" : [ "countryCode" ]
+  }
+}, {
+  "name" : "get-available-countries",
+  "description" : "Get all available countries supported by the public holiday API",
+  "uri" : "https://date.nager.at/api/v3/AvailableCountries",
+  "type" : "http",
+  "inputSchema" : {
+    "type" : "object",
+    "properties" : { },
+    "required" : null
+  }
 } ]
